@@ -4,6 +4,7 @@
   "author": "Sanshiroh SAKAI <sakai.s@ekzm.co.jp>",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^8.21.0",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.7.1"
   }
