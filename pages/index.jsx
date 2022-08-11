@@ -1,6 +1,4 @@
-import Header from '@/components/header'
 import Hero from '@/components/hero'
-import Footer from '@/components/footer'
 
 const EachPost = ({ title, url }) => {
   return (
@@ -28,11 +26,7 @@ export default function Home() {
 
   return (
     <>
-      <Header />
-
-      <main>
-        <Hero />
-      </main>
+      <Hero title="CUBE" subtitle="アウトプットしていくサイト" imageOn />
 
       <section>
         <h2>おすすめ記事</h2>
@@ -44,8 +38,6 @@ export default function Home() {
         <h1>CUBE</h1>
         <p>なんてすばらしいサイト！</p>
       </Decoration>
-
-      <Footer />
     </>
   )
 }

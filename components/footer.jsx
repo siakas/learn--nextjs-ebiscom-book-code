@@ -1,8 +1,12 @@
+import Logo from '@/components/logo'
+
 export default function Footer() {
   return (
     <>
       <hr />
-      <footer>Footer</footer>
+      <footer>
+        <Logo />
+      </footer>
     </>
   )
 }
