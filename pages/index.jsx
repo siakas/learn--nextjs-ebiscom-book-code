@@ -1,6 +1,6 @@
-import Header from '../components/header'
-import Hero from '../components/hero'
-import Footer from '../components/footer'
+import Header from '@/components/header'
+import Hero from '@/components/hero'
+import Footer from '@/components/footer'
 
 const EachPost = ({ title, url }) => {
   return (
