@@ -1,3 +1,4 @@
+import Container from '@/components/container'
 import Hero from '@/components/hero'
 
 const EachPost = ({ title, url }) => {
@@ -25,7 +26,7 @@ export default function Home() {
   }
 
   return (
-    <>
+    <Container>
       <Hero title="CUBE" subtitle="アウトプットしていくサイト" imageOn />
 
       <section>
@@ -38,6 +39,6 @@ export default function Home() {
         <h1>CUBE</h1>
         <p>なんてすばらしいサイト！</p>
       </Decoration>
-    </>
+    </Container>
   )
 }

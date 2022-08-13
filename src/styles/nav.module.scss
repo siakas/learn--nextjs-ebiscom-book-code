@@ -1,0 +1,31 @@
+.list {
+  display: flex;
+
+  a {
+    display: block;
+    padding: 0.4em 3em;
+    transition: all 0.2s ease-out;
+
+    // ホバーできる環境に適用するスタイル
+    @media (hover: hover) {
+      &:hover {
+        color: var(--accent);
+        background-color: var(--gray-10);
+      }
+    }
+
+    // ホバーできない環境（モバイル等）に適用するスタイル
+    @media (hover: none) {
+      & {
+        // タップ時に適用されるデバイス標準のハイライトカラーを削除
+        -webkit-tap-highlight-color: transparent;
+
+        &:active {
+          // タップ時にアクセントカラーで表示するように指定
+          color: var(--accent);
+          background-color: var(--gray-10);
+        }
+      }
+    }
+  }
+}
