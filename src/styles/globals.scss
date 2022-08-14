@@ -218,6 +218,10 @@ hr {
   display: none;
 }
 
+span > img[srcset] {
+  transition: 0.15s;
+}
+
 *,
 *::before,
 *::after {
