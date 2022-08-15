@@ -6,7 +6,15 @@
   "singleQuote": true,
   "jsxSingleQuote": false,
   "arrowParens": "avoid",
-  "printWidth": 360,
+  "printWidth": 100,
   "bracketSpacing": true,
-  "htmlWhitespaceSensitivity": "ignore"
+  "htmlWhitespaceSensitivity": "ignore",
+  "overrides": [
+    {
+      "files": ["*.html"],
+      "options": {
+        "printWidth": 360
+      }
+    }
+  ]
 }
