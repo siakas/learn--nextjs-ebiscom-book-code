@@ -1,0 +1,34 @@
+.stack {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  > * + * {
+    margin-top: var(--stack-space, 1.5em);
+  }
+
+  h2,
+  h3 {
+    // 直接 margin-top を設定するとこれらが .stack の first-child となった時に不要なマージンが空いてしまうため、
+    // それを回避するために変数の値のみを変更している
+    --stack-space: 2em;
+
+    + * {
+      --stack-space: 0.8em;
+    }
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  ul,
+  li {
+    padding: revert; // ブラウザ標準のスタイルに戻している
+    list-style: revert;
+  }
+
+  li {
+    + li {
+      margin-top: 0.8em;
+    }
+  }
+}

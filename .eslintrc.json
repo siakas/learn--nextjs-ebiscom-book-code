@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "standard",
+    "next/core-web-vitals",
+    "prettier"
+  ]
+}
