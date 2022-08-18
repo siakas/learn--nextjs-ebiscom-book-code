@@ -1,9 +1,29 @@
 .list {
-  display: flex;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+
+  @media (max-width: 767px) {
+    position: fixed;
+    inset: 0 -100% 0 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--white);
+    transition: transform 0.4s;
+
+    display: grid;
+    gap: 40px;
+    place-content: center;
+    text-align: center;
+
+    .open & {
+      transform: translateX(-100%);
+    }
+  }
 
   a {
     display: block;
-    padding: 0.4em 3em;
+    padding: 1em 3em;
     transition: all 0.2s ease-out;
 
     // ホバーできる環境に適用するスタイル
@@ -28,4 +48,61 @@
       }
     }
   }
+}
+
+.btn {
+  all: unset;
+  outline: revert;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  position: relative;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  .close & {
+    color: var(--gray-75);
+  }
+
+  .open & {
+    color: var(--white);
+  }
+}
+
+.btn::before,
+.btn::after,
+.btn .bar {
+  grid-area: 1 / 1;
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background-color: currentColor;
+  transition: transform 0.4s;
+}
+
+.close .btn::before {
+  transform: translateY(-8px);
+}
+
+.close .btn::after {
+  transform: translateY(8px);
+}
+
+.open .btn::before {
+  transform: rotate(45deg);
+}
+
+.open .btn::after {
+  transform: rotate(-45deg);
+}
+
+.open .btn .bar {
+  transform: scale(0);
 }
