@@ -6,7 +6,15 @@ import Contact from '@/components/contact'
 import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from '@/components/two-column'
 import Accordion from '@/components/accordion'
 import Image from 'next/image'
-import eyecatch from '@/assets/img/about.jpg'
+// import eyecatch from '@/assets/img/about.jpg'
+
+const eyecatch = {
+  src: 'https://images.microcms-assets.io/assets/9431d86cef0d4081a4298f8ef072644b/e0624d6d39784e699c15a4699df051fa/about.jpg',
+  height: 960,
+  width: 1920,
+  blurDataURL:
+    'data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAfEAABBAICAwAAAAAAAAAAAAABAAIDBAYRBSESEzH/xAAUAQEAAAAAAAAAAAAAAAAAAAAG/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAMyAf/aAAwDAQACEQMRAD8Aq8GvW7l7LxbtTzivz1iCESyF3rjayPxY3fxo2dAddoiJAucAbbP/2Q==',
+}
 
 export default function About() {
   return (
