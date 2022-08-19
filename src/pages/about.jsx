@@ -4,6 +4,7 @@ import Hero from '@/components/hero'
 import PostBody from '@/components/post-body'
 import Contact from '@/components/contact'
 import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from '@/components/two-column'
+import Accordion from '@/components/accordion'
 import Image from 'next/image'
 import eyecatch from '@/assets/img/about.jpg'
 
@@ -49,6 +50,26 @@ export default function About() {
             <p>
               今までと違うものを作ることで愛着が湧いてきます。そこで興味を持ったことは小さなことでもいいから取り入れて、良いものを作れるようにしています。小さなヒントから新しいものを生み出すようなモノづくりは、これからも続けていきたいです。
             </p>
+
+            <h2>FAQ</h2>
+
+            <Accordion heading="プログラミングのポイントについて">
+              <p>
+                プログラミングのポイントは、作りたいものを作ることです。楽しいことから思いつき、目標とゴールを決め、そこに向かってさまざまな課題を設定していきながら、プログラムを作っていきます。
+              </p>
+            </Accordion>
+
+            <Accordion heading="古代語の解読について">
+              <p>
+                古代語を解読するのに必要なのは、書かれた文字そのものだけです。古代の世界観や思考方法、それらを読み取ってこそ古代の世界観が理解できてきます。
+              </p>
+            </Accordion>
+
+            <Accordion heading="公開リポジトリの活用について">
+              <p>
+                公開リポジトリを活用すると、全世界のどこからでもアクセスし、開発者が関連するプロジェクトのタスクを利用することができます。
+              </p>
+            </Accordion>
           </PostBody>
         </TwoColumnMain>
 

@@ -6,7 +6,7 @@ export default function Nav() {
   const [navIsOpen, setNavIsOpen] = useState(false)
 
   const toggleNav = () => {
-    setNavIsOpen(prev => !prev)
+    setNavIsOpen((prev) => !prev)
   }
 
   const closeNav = () => {
